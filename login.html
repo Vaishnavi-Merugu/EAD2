@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Login Page</h1>
+        <form>
+            <label>Username </label>
+            <input type="text" placeholder="Enter your Username" required><br><br>
+            <label>Password </label>
+            <input type="password" id="pass" placeholder="Enter your password" required><br><br><br>
+            <button type="button" onclick="verifyPassword()">Submit</button>
+            <div class="message" id="message"></div>
+        </form>
+    </div>
+    <script>
+        function verifyPassword() {
+            // Regular expression to validate password
+            var passw = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,12}$/;
+            var passwordInput = document.getElementById('pass').value;
+            var messageDiv = document.getElementById('message');
+           
+            // Clear previous messages
+            messageDiv.innerHTML = '';
+            if (passwordInput.match(passw)) {
+                messageDiv.innerHTML = 'Password is valid';
+                messageDiv.style.color = 'green';
+                messageDiv.style.fontWeight = 'bold';
+            } else {
+                messageDiv.innerHTML = 'Password is invalid. It should be 8-12 characters long and contain at least one alphabetic character, one number, and one special character.';
+                messageDiv.style.color = 'red';
+                messageDiv.style.fontWeight = 'bold';
+            }
+        }
+    </script>  
+</body>
+</html>

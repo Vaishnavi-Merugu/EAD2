@@ -1,0 +1,45 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height:100vh;
+    background-color: rgb(56,105,155);
+}
+h1{
+    align-items: center;
+}
+div{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(0,0,0,0.2);
+    padding: 10px 20px;
+    height: 250;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+button{
+    background-color: rgb(56,105,155);
+}
+form {
+    justify-content: center;
+    align-items: center; /* Center children horizontally */
+    gap: 10px; /* Optional: Add space between form elements */
+}
+label{
+    font-size: medium;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.message {
+    text-align: center;
+    color: red; /* Default color for error messages */
+    font-weight: bold;
+    margin-top: 10px; /* Space above the message */
+    box-sizing: border-box;
+}
